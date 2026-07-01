@@ -152,3 +152,5 @@ Actualmente todas las funcionalidades principales se encuentran implementadas y 
 
 Poryecto desarrollado por Dayron Uriarte Aguero
 Probando los branches 
+## Rama de practica
+Esta seccion solamente fue creada para aprender a trabajar con ramas
