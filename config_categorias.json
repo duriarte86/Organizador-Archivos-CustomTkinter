@@ -1,0 +1,50 @@
+{
+    ".pdf": {
+
+        "carpeta": "PDFs",
+        "categoria": "PDF"
+    },
+
+    ".jpg": {
+
+        "carpeta": "Imagenes",
+        "categoria": "IMAGEN"
+    },
+
+     ".jpeg": {
+
+        "carpeta": "Imagenes",
+        "categoria": "IMAGEN"
+    },
+
+     ".png": {
+
+        "carpeta": "Imagenes",
+        "categoria": "IMAGEN"
+    },
+
+     ".docx": {
+
+        "carpeta": "Documentos",
+        "categoria": "DOCUMENTO"
+    },
+
+     ".xlsx": {
+
+        "carpeta": "Hoja de Calculo",
+        "categoria": "EXCEL"
+    },
+
+     ".zip": {
+
+        "carpeta": "Compactado",
+        "categoria": "ZIP"
+    },
+
+     ".txt": {
+
+        "carpeta": "Archivos de Texto",
+        "categoria": "TXT"
+    }
+    
+}
