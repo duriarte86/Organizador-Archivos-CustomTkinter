@@ -1,5 +1,5 @@
 import customtkinter as ctk
-from constants import (COLOR_PRIMARIO, RADIO_PANEL, FUENTE_SUBTITULO)
+from constants import (COLOR_PRIMARIO, RADIO_PANEL, FUENTE_SUBTITULO, FUENTE_PORCENTAJE)
 
 
 def crear_panel_progreso(main):
@@ -12,14 +12,15 @@ def crear_panel_progreso(main):
             corner_radius=RADIO_PANEL
         )        
        
-        main.frame_progreso.grid_columnconfigure(0, weight=1)        
+        main.frame_progreso.grid_columnconfigure(0, weight=1) 
+               
         
         main.titulo_progreso = ctk.CTkLabel(
             main.frame_progreso,
             text="Progreso",
             font=FUENTE_SUBTITULO
         )        
-        main.titulo_progreso.grid(row=0, column=0, padx=20, sticky="ew")
+        main.titulo_progreso.grid(row=0, column=0, pady=(10,5))
         
         main.barra = ctk.CTkProgressBar(
             main.frame_progreso,
@@ -37,7 +38,8 @@ def crear_panel_progreso(main):
         
         main.porcentaje_label = ctk.CTkLabel(
             main.frame_progreso,
-            text="0%"
+            text="0%",
+            font= FUENTE_PORCENTAJE
         )
         main.porcentaje_label.grid(row=2, column=0, pady= 5)
         

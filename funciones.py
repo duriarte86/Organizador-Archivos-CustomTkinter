@@ -1,4 +1,6 @@
 from datetime import datetime
+from utils import obtener_ruta_recurso
+
 import os
 import shutil
 from tkinter import filedialog
@@ -57,7 +59,7 @@ def cargar_categorias():
      y devuelve las categorias disponibles
     """
     
-    ruta_config = os.path.join(os.path.dirname(__file__), "config_categorias.json")    
+    ruta_config =obtener_ruta_recurso("config_categorias.json")    
         
     try:
         with open(ruta_config, "r", encoding="utf-8") as archivo:
