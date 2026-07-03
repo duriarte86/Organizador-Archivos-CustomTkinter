@@ -8,7 +8,7 @@ def obtener_ruta_recurso(nombre_archivo):
     #====================================================================
     
     if getattr(sys, "frozen",False):
-        base_path = sys.MEIPASS
+        base_path = sys._MEIPASS
 
     else:
         base_path = os.path.dirname(os.path.abspath(__file__))
