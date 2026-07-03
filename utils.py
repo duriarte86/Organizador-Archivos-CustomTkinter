@@ -14,3 +14,15 @@ def obtener_ruta_recurso(nombre_archivo):
         base_path = os.path.dirname(os.path.abspath(__file__))
         
     return os.path.join(base_path, nombre_archivo)
+
+def obtener_ruta_config():
+    #=============================================================
+    # Devuelve la carpeta donde debe guardarse config.json
+    # En desarrollo: carpeta del proyecto
+    # En Ejecutable carpeta donde esta el .exe
+    #============================================================
+    
+    if getattr(sys, "frozen", False):
+        return os.path.dirname(sys.executable)
+    else:
+        return os.path.dirname(os.path.abspath(__file__))

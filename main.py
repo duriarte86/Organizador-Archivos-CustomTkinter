@@ -11,6 +11,7 @@ from datetime import datetime
 from tkinter import filedialog
 from ui import (crear_header, crear_panel_botones, crear_panel_log, crear_panel_progreso, crear_panel_ruta)
 from constants import (ALTO_VENTANA,ANCHO_VENTANA, FUENTE_SUBTITULO, RADIO_PANEL, FUENTE_NUMERO)
+from utils import obtener_ruta_config
 
 ctk.set_appearance_mode("System")
 ctk.set_default_color_theme("blue")
@@ -33,7 +34,7 @@ class OrganizadorApp:
         
         try:
             
-            ruta_config = os.path.join(os.path.dirname(__file__), "config.json")
+            ruta_config = os.path.join(obtener_ruta_config(), "config.json")
             with open(ruta_config, "w", encoding="utf-8") as archivo:
                 
                 json.dump(
@@ -50,7 +51,7 @@ class OrganizadorApp:
         """
          Carga la ultima carpeta seleccionada
         """
-        ruta_config = os.path.join(os.path.dirname(__file__), "config.json")        
+        ruta_config = os.path.join(obtener_ruta_config(), "config.json")        
         
         if not os.path.exists(ruta_config):
             return
